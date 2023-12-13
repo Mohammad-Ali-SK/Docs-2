@@ -6,3 +6,7 @@
 ::selection{
     color: orange;
 }
+
+.down::selection{
+    color: black;
+}
