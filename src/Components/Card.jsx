@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 // eslint-disable-next-line react/prop-types
 const Card = ({data}) => {
   return (
-    <motion.div drag whileDrag={{scale:1.2}} className=' w-60 h-72 rounded-[20px] bg-zinc-900 p-5 relative text-white overflow-hidden'>
+    <motion.div drag whileDrag={{scale:1.2}} className='w-60 h-72 rounded-[20px] bg-zinc-900 p-5 relative text-white overflow-hidden'>
 
         <span> <FaRegFileAlt/> </span>
 
