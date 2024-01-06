@@ -1,27 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useRef } from 'react'
 import Card from './Card'
 
-
 const Main = () => {
-    const data = [
-        {icon:false,text:"sit amet consectetur adipisicing elit. Quia facere corporis natus excepturi .",size:".03mb", download:true,color:"bg-green-600",lol:true},
-        {icon:true,text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia facere corporis natus excepturi .",size:"Close", download:false, color: 'bg-blue-600',lol:false},
-        {icon:false,text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.  .",size:".03mb", download:true,color:"bg-blue-600",lol:true},
+  const ref = useRef(null);
+  const data = [
+    {icon : true, text: "Lorem ipsum dolor sit amet consectetur adipisicing.",size:"0.7mb",download:true,downicolor:true, com:true, downloadColor:true},
+    {icon : true, text: "Sorem ipsum dolor sit amet consectetur Suffer.",size:".9mb",download:false,downicolor:false,com:false,downloadColor:false},
+    {icon : true, text: "Rorem ipsum dolor sit amet  adipisicing in the sky on the body.",size:".23mb",download:false,downicolor:false,com:false,downloadColor:false},
+  ]
 
-    ];
   return (
-    <main className=' p-5 absolute w-full h-screen top-0 left-0 z-5 flex flex-wrap gap-3'>
-     {data.map((item,index) => (
-        // eslint-disable-next-line react/jsx-key
-        <Card data={item}/>
-     ))}
-    
-
-      </main>
-
-    )
+    <div ref={ref} className='w-full h-full m-6 top-0 left-0 fixed z-[3] flex gap-5 flex-wrap'>
+      {data.map((item, index) => (
+        <Card key={index} data={item} refrence={ref} />
+      ))}
+    </div>
+  )
 }
 
-{/* <p className=' bg-green-600'</p> */}
 export default Main
